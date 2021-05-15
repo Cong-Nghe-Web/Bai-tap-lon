@@ -142,10 +142,9 @@
                 echo '<a href="index.php?c=home&a=dangnhap" style="float:right">Đăng nhập</a>';
               }
           ?>
-            <form action="tim-kiem.html">
+            <form action="?index.php?c=sreach&a=danhsach">
               <input type="submit" formmethod="post" class="search-button" value="Tìm kiếm" style="float:right">
-					    <input type="search" class="search-box" placeholder="Bạn cần tìm gì ?" style="float:right">
-					  
+					    <input type="search" class="search-box" placeholder="Bạn cần tìm gì ?" style="float:right" name="sreach">
 				    </form>
         </div>
         

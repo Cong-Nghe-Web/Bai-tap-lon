@@ -21,6 +21,7 @@
   
   body{
     height: 100%;
+    background: #ffd4aa;
   }
   
   main{

@@ -1,5 +1,28 @@
 <?php include_once('header.php'); ?>
+<style type="text/css">
+.class6{
+	margin-top:5%;
+	text-decoration: none;
+   	font-family:candara;
+   	font-size: 60%;
+   	border:3px solid #007bff;
+   	border-radius: 5px;
+   	padding: 1%;
+   	transition:0.3s;
+   	cursor:pointer;
+   	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.class61{
+   	background-color:#007bff;
+   	color:white;
+}
 
+.class61:hover{
+   	background-color:white;
+   	color:#007bff;
+	
+}
+</style>
 <script type="text/javascript">
     function check()
     {
@@ -24,22 +47,22 @@
     }
 </script>
 <form name='myform'>
-Q1.What is the capital of Vietnam ?<br>
-<input type="radio" name="question_01" value="a"> Da Nang<br>
-<input type="radio" name="question_01" value="b"> Ho Chi Minh<br>
-<input type="radio" name="question_01" value="c"> Ha Noi<br>
-<input type="radio" name="question_01" value="d"> Hai Phong<br><br>
-
-Q2. HTML stands for...?<br>
-<input type="radio" name="question_02" value="a"> hypertext markup language<br>
-<input type="radio" name="question_02" value="b"> hypertension markup language<br><br>
-
-Q3. Which country is the largest in the world?<br>
-<input type="radio" name="question_03" value="a"> Russia<br>
-<input type="radio" name="question_03" value="b"> China<br>
-<input type="radio" name="question_03" value="c"> America<br>
-<input type="radio" name="question_03" value="d"> India<br><br>
-<input  type="button" value="submit" onclick="check()">
+<ol>
+    <li>What is the capital of Vietnam ?<br>
+    <input type="radio" name="question_01" value="a"> Da Nang<br>
+    <input type="radio" name="question_01" value="b"> Ho Chi Minh<br>
+    <input type="radio" name="question_01" value="c"> Ha Noi<br>
+    <input type="radio" name="question_01" value="d"> Hai Phong<br><br>
+    <li>HTML stands for...?<br>
+    <input type="radio" name="question_02" value="a"> hypertext markup language<br>
+    <input type="radio" name="question_02" value="b"> hypertension markup language<br><br>
+    <li> Which country is the largest in the world?<br>
+    <input type="radio" name="question_03" value="a"> Russia<br>
+    <input type="radio" name="question_03" value="b"> China<br>
+    <input type="radio" name="question_03" value="c"> America<br>
+    <input type="radio" name="question_03" value="d"> India<br><br>
+</ol>
+<input style="	background-color:#007bff,color:white;" type="button" value="submit" onclick="check()">
 </form>
 <div class="points"></div>
 <?php include_once('footer.php'); ?>

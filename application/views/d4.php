@@ -24,21 +24,21 @@
     }
 </script>
 <form name='myform'>
-Q1.What is the capital of Vietnam ?<br>
-<input type="radio" name="question_01" value="a"> Da Nang<br>
-<input type="radio" name="question_01" value="b"> Ho Chi Minh<br>
-<input type="radio" name="question_01" value="c"> Ha Noi<br>
-<input type="radio" name="question_01" value="d"> Hai Phong<br><br>
-
-Q2. HTML stands for...?<br>
-<input type="radio" name="question_02" value="a"> hypertext markup language<br>
-<input type="radio" name="question_02" value="b"> hypertension markup language<br><br>
-
-Q3. Which country is the largest in the world?<br>
-<input type="radio" name="question_03" value="a"> Russia<br>
-<input type="radio" name="question_03" value="b"> China<br>
-<input type="radio" name="question_03" value="c"> America<br>
-<input type="radio" name="question_03" value="d"> India<br><br>
+<ol>
+    <li>What is the capital of Vietnam ?<br>
+    <input type="radio" name="question_01" value="a"> Da Nang<br>
+    <input type="radio" name="question_01" value="b"> Ho Chi Minh<br>
+    <input type="radio" name="question_01" value="c"> Ha Noi<br>
+    <input type="radio" name="question_01" value="d"> Hai Phong<br><br>
+    <li>HTML stands for...?<br>
+    <input type="radio" name="question_02" value="a"> hypertext markup language<br>
+    <input type="radio" name="question_02" value="b"> hypertension markup language<br><br>
+    <li> Which country is the largest in the world?<br>
+    <input type="radio" name="question_03" value="a"> Russia<br>
+    <input type="radio" name="question_03" value="b"> China<br>
+    <input type="radio" name="question_03" value="c"> America<br>
+    <input type="radio" name="question_03" value="d"> India<br><br>
+</ol>
 <input  type="button" value="submit" onclick="check()">
 </form>
 <div class="points"></div>
