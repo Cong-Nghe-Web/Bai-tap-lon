@@ -109,6 +109,7 @@
 	
 }
 
+
   
   /* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
   có chiều rộng dưới 700px */
@@ -128,6 +129,19 @@
     }
   }
         </style>
+
+  <script type="text/javascript">
+		function Validate(){
+			var name = document.myform.sreach.value;
+			name.trim();
+			if( name == ""){
+				alert("Không được để trống thông tin");
+				return false;
+			}
+			return true;
+		}
+
+	</script>
     </head>
     <body>
 
@@ -135,6 +149,7 @@
             <a href='index.php?'>Trang chủ</a>
             <a href="index.php?c=nguphap&a=danhsach">Ngữ pháp </a>
             <a href="index.php?c=dethi&a=danhsach">Luyện đề</a>
+            <a href="index.php?c=phanhoi&a=danhsach">Phản hồi</a>
             <?php 
               if (isset($_SESSION['username']) && $_SESSION['username']){
                 echo 'Xin chào '. $_SESSION['username'].'| <a href="index.php?c=out&a=logout">Logout</a>';
@@ -142,9 +157,10 @@
                 echo '<a href="index.php?c=home&a=dangnhap" style="float:right">Đăng nhập</a>';
               }
           ?>
-            <form action="?index.php?c=sreach&a=danhsach">
+            <form action="?index.php?c=sreach&a=danhsach" onsubmit="return Validate()">
               <input type="submit" formmethod="post" class="search-button" value="Tìm kiếm" style="float:right">
 					    <input type="search" class="search-box" placeholder="Bạn cần tìm gì ?" style="float:right" name="sreach">
+					  
 				    </form>
         </div>
         

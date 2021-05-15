@@ -21,8 +21,8 @@ class RegisterController extends BaseController{
             $result= $this->registerModel->addUser($username);
             if ($result){
                 $this->create($this->registerModel->TABLE, $data);
-                set_logged($data['username']);
-                redirect(base_url('index.php/?c=home&a=homelogin'));
+                set_logged($username);
+                redirect('?c=home&a=homelogin');
             }else {
                 
             }

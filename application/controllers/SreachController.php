@@ -7,8 +7,9 @@ class SreachController extends BaseController{
     }
     public function danhsach(){
         $name= $_REQUEST['sreach'];
-        $data =$this->nguphapModel->danhsachN($name);
-        return $this->CreateViewData('timkiem', $data);    
+        $data =$this->sreachModel->danhsachN($name);
+        // return $this->CreateViewData('timkiem',$data);
+        print_r($data);
     }
 
 }

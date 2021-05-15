@@ -11,4 +11,4 @@
                      }
                 ?>
                 </ul>
-<?php include_once('footter.php'); ?>
+<?php include_once('footr.php'); ?>

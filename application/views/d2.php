@@ -60,7 +60,7 @@
     <input type="radio" name="question_03" value="c"> America<br>
     <input type="radio" name="question_03" value="d"> India<br><br>
 </ol>
-<input  type="button" value="submit" onclick="check()">
+<input  type="button" class="search-button" value="submit" onclick="check()">
 </form>
 <div class="points"></div>
 <?php include_once('footer.php'); ?>

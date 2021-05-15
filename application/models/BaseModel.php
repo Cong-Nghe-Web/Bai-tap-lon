@@ -21,8 +21,13 @@ class BaseModel extends Database{
         return $data;
     }
 
-    public function danhsachName($table, $name){
+    public function findByName($table, $name){
         $sql = "select * FROM {$table} where name = '{$name}'";
+        return $this->_query($sql);
+    }
+
+    public function danhsachName($table, $name){
+        $sql = "select * FROM {$table} where name = '%{$name}%'";
         return $this->getAllQuery($sql);
     }
 
