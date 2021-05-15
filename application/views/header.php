@@ -1,0 +1,146 @@
+<?php if (!defined('IN_SITE')) die('The request not found'); ?>
+<?php session_start(); ?>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Trang chủ</title>
+        <!-- <link ref="stylesheet" href='../../public/home/css/main.css' type="text/css"> -->
+        <style>
+
+            
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: #ffd4aa;
+  }
+  
+  .topnav {
+  overflow: hidden;
+  background-color: #ffaa56;
+  position: sticky;
+  top: 0; 
+  position: fixed;
+  width: 100%;
+}
+
+/* Định dạng link điều hướng */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+/* Thay đổi màu liên kết khi di chuột qua */
+.topnav a:hover {
+  background-color: #ff7f00;
+  color: white;
+}
+  
+  /* Tạo hai cột không bằng nhau, float cạnh nhau 
+   Cột trái */
+  .leftcolumn { 
+    float: left;
+    width: 75%;
+  }
+  
+  /* Cột phải */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    /* background-color: #e9d8f4; */
+    padding-left: 20px;
+  }
+  
+  /* Hình ảnh tượng trưng */
+  .fakeimg {
+    background-color: #ffaaaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Thêm định dạng thẻ cho bài viết */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear float khác sau các cột */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 10px;
+    text-align: center;
+    background: white;
+    margin-top: 10px;
+  }
+  .search-box{
+    padding: 14px 16px;
+    font-family: Arial;
+    border: 2px solid #ffaa56;
+    border-radius: 5px;
+  }
+  .search-button{
+    background-color: #ffaa56;
+    border: 2px solid #ffaa56;
+    border-radius: 5px;
+    padding: 14px 16px;
+    font-family: Arial;
+    color: while;
+  }
+  
+  /* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
+  có chiều rộng dưới 700px */
+  @media screen and (max-width: 700px) {
+    .leftcolumn, .rightcolumn { 
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Bố cục linh hoạt: Thanh menu điều hướng xếp chồng lên nhau thay vì cạnh nhau
+  khi màn hình có chiều rộng dưới 300px  */
+  @media screen and (max-width: 300px) {
+    .topnav li a {
+      float: none;
+      width: 100%;
+    }
+  }
+        </style>
+    </head>
+    <body>
+
+        <div class="topnav">
+            <a href='index.php?'>Trang chủ</a>
+            <a href="index.php?c=nguphap&a=danhsach">Ngữ pháp </a>
+            <a href="index.php?c=dethi&a=danhsach">Luyện đề</a>
+            <?php 
+              if (isset($_SESSION['username']) && $_SESSION['username']){
+                echo 'Xin chào '. $_SESSION['username'].'| <a href="index.php?c=out&a=logout">Logout</a>';
+              }else {
+                echo '<a href="index.php?c=home&a=dangnhap" style="float:right">Đăng nhập</a>';
+              }
+          ?>
+            <form action="tim-kiem.html">
+              <input type="submit" formmethod="post" class="search-button" value="Tìm kiếm" style="float:right">
+					    <input type="search" class="search-box" placeholder="Bạn cần tìm gì ?" style="float:right">
+					  
+				    </form>
+        </div>
+        
+        <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
