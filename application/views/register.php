@@ -155,7 +155,7 @@
                 <label id="lpass" style="color: red; margin-top: 5px"></label>
                 <input placeholder="Xác nhận mật khẩu" autocomplete="off" type="password" name="password2" id="cfpwd" >
             </div>
-			<input type="hidden" value="register" name='request'>
+			      <input type="hidden" value="register" name='request'>
             <input type="submit" value="Đăng ký" name='dangki'>
         </form>
         <div class="re_link">
