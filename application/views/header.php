@@ -100,7 +100,15 @@
     padding: 14px 16px;
     font-family: Arial;
     color: while;
+
   }
+
+  .search-button:hover{
+   	background-color:#ff7f00;
+   	color:while;
+	
+}
+
   
   /* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
   có chiều rộng dưới 700px */

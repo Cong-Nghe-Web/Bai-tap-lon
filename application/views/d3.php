@@ -1,4 +1,5 @@
 <?php include_once('header.php'); ?>
+
 <script type="text/javascript">
     function check()
     {
@@ -18,7 +19,8 @@
         {
             count++;
         }
-        alert("you got " + count + " marks");
+        var b=document.querySelector(".points");
+	    b.innerHTML = "Điểm:" + "  " + count;
     }
 </script>
 <form name='myform'>
@@ -37,6 +39,7 @@ Q3. Which country is the largest in the world?<br>
 <input type="radio" name="question_03" value="b"> China<br>
 <input type="radio" name="question_03" value="c"> America<br>
 <input type="radio" name="question_03" value="d"> India<br><br>
-<input type="button" value="submit" onclick="check()">
+<input  type="button" value="submit" onclick="check()">
 </form>
+<div class="points"></div>
 <?php include_once('footer.php'); ?>
