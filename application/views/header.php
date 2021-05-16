@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Học tiếng anh cùng CLV</title>
-        <!-- <link ref="stylesheet" href='../../public/home/css/main.css' type="text/css"> -->
+        <link ref="stylesheet" href='../../public/home/css/main.css' type="text/css"> 
         <style>
 
             
