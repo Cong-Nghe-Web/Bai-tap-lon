@@ -4,9 +4,8 @@
         </div>
         <div class="rightcolumn">
             <div class="card">
-                <marquee><h2>Giới thiệu</h2></marquee>
-                <div class="fakeimg" style="height:100px;"><img src="https://imgur.com/4uqeGqp" alt='Ảnh nhóm 1'/></div>
-                <div class="fakeimg" style="height:100px;"><img src="../../public/home/image/nhom.png" alt= 'Ảnh nhóm 2'></div>
+                <h2>Giới thiệu</h2>
+                <div class="fakeimg" style="height:100px;"><img src="https://i.imgur.com/7XXdIlm.png" alt='Ảnh nhóm 1' width="100" height="100"></div>
                 <p sytle='float:center'>Nhóm CLV</p>
             </div>
             <div class="card">
