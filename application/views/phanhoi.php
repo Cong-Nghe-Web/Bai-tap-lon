@@ -28,7 +28,7 @@ function Validate1(){
     </table>
     <h4>Bạn có muốn phản hồi</h4>
     <form action="?c=phanhoi&a=add" name="myform2" onsubmit="return Validate1()">
-		<input type="textarea" rows="9" cols="70" class="search-box" placeholder="Hãy phản hồi vào đây?" id="phanhoi" name="phanhoi"><br>
+		<input type="textarea"  class="search-box" placeholder="Hãy phản hồi vào đây?" id="phanhoi" name="phanhoi"><br>
         <input type="submit" formmethod="post" class="search-button" value="Phản hồi" >
 					  
 	</form>

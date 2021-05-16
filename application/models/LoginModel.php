@@ -7,5 +7,8 @@ class LoginModel extends BaseModel{
         return $this->findByName(self::TABLE, $username);
     }
 
+    public function addUser($data){
+        return $this->create(self::TABLE, $data);
+    }
 
 }

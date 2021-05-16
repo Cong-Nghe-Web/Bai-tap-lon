@@ -29,8 +29,13 @@ class BaseModel extends Database{
 
     public function danhsachName($table, $name){
         $sql = "select * FROM {$table} where name like '%{$name}%'";
-        echo $sql;
         return $this->getAllQuery($sql);
+    }
+
+    public function findSo($table, $name){
+        $sql = "select * FROM {$table} where username = '{$username}'";
+        $query= $this->_query($sql);
+        echo  mysqli_num_rows($query);
     }
 
     public function create($table, $data =[]){

@@ -92,6 +92,9 @@
     font-family: Arial;
     border: 2px solid #ffaa56;
     border-radius: 5px;
+    cols: 50px;
+    rows: 80px;
+
   }
   .search-button{
     background-color: #ffaa56;

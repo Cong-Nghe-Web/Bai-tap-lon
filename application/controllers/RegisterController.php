@@ -1,9 +1,10 @@
 <?php
 class RegisterController extends BaseController{
-    private $registerModel;
-    public function __contstruct(){
-        $this->CreateModel('RegisterModel');
-        $this->registerModel= new RegisterModel;
+    private $loginModel;
+
+    public function __construct(){
+        $this->CreateModel('LoginModel');
+        $this->loginModel= new LoginModel;
     }
 
     public function register(){  
@@ -16,20 +17,19 @@ class RegisterController extends BaseController{
                     'username'=>"'$username'", 
                     'password'=>"'$password'",
                     'password2'=>"'$password2'"];
-            
-            $data1=$this->registerModel->find($username);
-            print_r($data1);
-            // if(empty($data1)){
-            //     $this->addUser( $data);
-            //     $_SESSION['username']=$username;
-            //     $_SESSION['name']=$name;
-            //     header('Location: index.php?');
+            $data1=$this->loginModel->find($username);
+
+            if(empty($data1)){
+                $this->loginModel->addUser( $data);
+                $_SESSION['username']=$username;
+                $_SESSION['name']=$name;
+                header('Location: index.php?');
                     
-            // } else {
-            //     echo "<script>
-            //             alert('Tên đăng nhập đã có, sử dụng tên khác');
-            //             history.back();
-            //         </script>";
-            // }
+            } else {
+                echo "<script>
+                        alert('Tên đăng nhập đã có, sử dụng tên khác');
+                        history.back();
+                    </script>";
+            }
     }
 }
