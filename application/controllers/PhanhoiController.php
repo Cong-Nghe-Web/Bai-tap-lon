@@ -14,10 +14,15 @@ class PhanhoiController extends BaseController{
     public function add(){
         if (isset($_SESSION['username'])&& $_SESSION['username'] ){
             $username= $_SESSION['username'];
-            $phanhoi= $_POST['phanhoi'];
+            $phanhoi= addslashes($_POST['phanhoi']);
             $data=['iduser'=>$username, 'phanhoi'=>$phanhoi];
-            $this->addPhanhoi($phanhoi);
-            redirect('?c=phanhoi&a=danhsach');
-        }
+            $this->phanhoiModel->addPhanhoi($data);
+            header('Location: index.php?c=phanhoi&a=danhsach');
+        }else {
+            echo "<script>
+                        alert('Hãy đăng nhập để phản hồi');
+                        history.back();
+                    </script>";
+         }
     }
 }

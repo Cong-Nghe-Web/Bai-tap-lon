@@ -1,14 +1,14 @@
 <?php include_once('header.php'); ?>
-    <h3>Tìm kiếm</h3>
+    <h3>Kết quả tìm kiếm</h3>
                 <ul>
                 <?php
                      if(empty($data)){
-                        foreach ($data as $val){
+                        echo 'Không tìm thấy ';
+                     } else {
+                         foreach ($data as $val){
                             echo '<li><a href="?c=nguphap&a=bieudien&id='.$val['id'].'"> '.$val['name'].' </a></li>';
                         }
-                     } else {
-                         echo 'Không tìm thấy';
                      }
                 ?>
                 </ul>
-<?php include_once('footr.php'); ?>
+<?php include_once('footer.php'); ?>

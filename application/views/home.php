@@ -1,6 +1,6 @@
 <?php include_once('header.php'); ?>
                 <h2>Tại sao bạn nên học tại English?</h2>
-                <div class="fakeimg" style="height:200px;"><image src="https://imgur.com/Ywwncv6"></div>
+                <div class="fakeimg" style="height:200px;"><image src="https://imgur.com/Ywwncv6" alt='Ảnh học tiếng anh'></div>
                 <p>Tiếng anh là ngôn ngữ phổ biến trên thế giới </p>
                 <p>English là một nền tảng học Tiếng Anh trực tuyến và bạn có thể học tập mọi lúc mọi nơi,
                     giúp bạn có thể tự học tập và luyện tập, nhằm nâng cao trình độ
@@ -16,5 +16,7 @@
                     <li>Ngữ pháp cơ bản</li>
                     <li>Đề thi </li>
                     <li>Đề thi toiec</li>
+                    <li>Ngữ pháp nâng cao</li>
+                    <li>Giải trí</li>
                 </ul>
 <?php include_once('footer.php'); ?>

@@ -15,7 +15,7 @@ class Database{
     }
 
     public function close($connect){
-        mysql_close($connect);
+        mysqli_close($connect);
     }
 }
     

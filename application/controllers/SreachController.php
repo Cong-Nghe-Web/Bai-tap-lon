@@ -6,10 +6,9 @@ class SreachController extends BaseController{
         $this->sreachModel= new SreachModel;
     }
     public function danhsach(){
-        $name= $_REQUEST['sreach'];
+        $name= addslashes($_POST['sreach']);
         $data =$this->sreachModel->danhsachN($name);
-        // return $this->CreateViewData('timkiem',$data);
-        print_r($data);
+        return $this->CreateViewData('timkiem',$data);
     }
 
 }

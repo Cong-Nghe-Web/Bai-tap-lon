@@ -1,7 +1,7 @@
-<?php if (!defined('IN_SITE')) die('The request not found');
+<?php 
 class OutController extends BaseController{
     public function logout(){
         set_logout();
-        redirect(base_url('index.php/?'));
+        header('Location: index.php?');
     }
 }

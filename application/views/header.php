@@ -1,5 +1,4 @@
 <?php if (!defined('IN_SITE')) die('The request not found'); ?>
-<?php session_start(); ?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -19,6 +18,7 @@
   }
   
   .topnav {
+  padding: 10px;
   overflow: hidden;
   background-color: #ffaa56;
   position: sticky;
@@ -85,7 +85,7 @@
     padding: 10px;
     text-align: center;
     background: white;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .search-box{
     padding: 14px 16px;
@@ -106,11 +106,12 @@
   .search-button:hover{
    	background-color:#ff7f00;
    	color:while;
-	
+
 }
 
-
-  
+  table {
+    wight:100%;
+  }
   /* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
   có chiều rộng dưới 700px */
   @media screen and (max-width: 700px) {
@@ -128,20 +129,18 @@
       width: 100%;
     }
   }
-        </style>
-
+</style>
   <script type="text/javascript">
 		function Validate(){
 			var name = document.myform.sreach.value;
 			name.trim();
 			if( name == ""){
-				alert("Không được để trống thông tin");
+				alert("Nhập thông tin cần tìm kiếm");
 				return false;
 			}
 			return true;
 		}
-
-	</script>
+</script>
     </head>
     <body>
 
@@ -151,15 +150,15 @@
             <a href="index.php?c=dethi&a=danhsach">Luyện đề</a>
             <a href="index.php?c=phanhoi&a=danhsach">Phản hồi</a>
             <?php 
-              if (isset($_SESSION['username']) && $_SESSION['username']){
-                echo 'Xin chào '. $_SESSION['username'].'| <a href="index.php?c=out&a=logout">Logout</a>';
+              if (isset($_SESSION['username']) && $_SESSION['username'] && isset($_SESSION['name']) && $_SESSION['name']){
+                echo '<a href="index.php?c=out&a=logout" style="float:right">Logout</a><p style="float:right;color:while;font-size:15px">Xin chào '. $_SESSION['name'].'</p>';
               }else {
                 echo '<a href="index.php?c=home&a=dangnhap" style="float:right">Đăng nhập</a>';
               }
           ?>
-            <form action="?index.php?c=sreach&a=danhsach" onsubmit="return Validate()">
+            <form action="?c=sreach&a=danhsach"  name="myform" onsubmit="return Validate()">
               <input type="submit" formmethod="post" class="search-button" value="Tìm kiếm" style="float:right">
-					    <input type="search" class="search-box" placeholder="Bạn cần tìm gì ?" style="float:right" name="sreach">
+					    <input type="search" class="search-box" placeholder="Bạn cần tìm gì ?" style="float:right" id ="sreach" name="sreach">
 					  
 				    </form>
         </div>

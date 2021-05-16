@@ -17,17 +17,19 @@ class BaseModel extends Database{
         while($row= mysqli_fetch_assoc($query)){
             array_push($data, $row);
         }
-
+        $this->close($this->connect);
         return $data;
     }
 
-    public function findByName($table, $name){
-        $sql = "select * FROM {$table} where name = '{$name}'";
-        return $this->_query($sql);
+    public function findByName($table, $username){
+        $sql = "select * from {$table} where username = '{$username}'";
+        $query = $this->_query($sql);
+        return mysqli_fetch_assoc($query);
     }
 
     public function danhsachName($table, $name){
-        $sql = "select * FROM {$table} where name = '%{$name}%'";
+        $sql = "select * FROM {$table} where name like '%{$name}%'";
+        echo $sql;
         return $this->getAllQuery($sql);
     }
 
@@ -37,7 +39,6 @@ class BaseModel extends Database{
         $newValues= array_map(function ($value) {
             return "'". $value . "'";
         }, array_values($data));
-        
         $newValues=  implode(',', $newValues);
         $sql= "insert into ${table}(${columns}) values (${newValues})";
         return $this->_query($sql);

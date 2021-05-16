@@ -133,11 +133,10 @@
         </div>
         <form action='index.php?c=login&a=login' method="post" name="myform" onsubmit="return Validate()">
             <div class="user-pass">
-                <input placeholder="Tài khoản" autocomplete="off" type="text" name="username" id="usr" >
+                <input placeholder="Tài khoản" autocomplete="off" type="text" name="username" id="username" >
                 <label id="lpass" style="color: red; margin-top: 5px"></label>
-                <input placeholder="Mật khẩu" autocomplete="off" type="password" name="password" id="pwd">
+                <input placeholder="Mật khẩu" autocomplete="off" type="password" name="password" id="password">
             </div>
-            <input type="hidden" value="login" name='request'>
             <input type="submit" value="Đăng nhập" name='dangnhap'>
         </form>
         <a href='index.php?c=home&a=dangki'>Don't have account? Register</a>

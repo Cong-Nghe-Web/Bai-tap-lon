@@ -1,6 +1,4 @@
 <?php
-include_once ('./libs/role.php');
-include_once ('./libs/helper.php');
 class LoginController extends BaseController{
     private $loginModel;
 
@@ -9,25 +7,31 @@ class LoginController extends BaseController{
         $this->loginModel= new LoginModel;
     }
 
-    public function login(){
-        if(is_submit('login')){    
-            $username = input_post('username');
-            $password = input_post('password');
-
+    public function login(){ 
+            $username= addslashes($_POST['username']);
+            $password = addslashes($_POST['password']);
+            
             $data= $this->loginModel->find($username);
-            $error = array();
-            if(empty($data)){
-                $error['username']= 'Tên đăng nhập không đúng';
-            } else if ($data['password'] != md5($password)){
-                $error['password'] = 'Mật khẩu bạn nhập không đúng';
-            } 
 
-            if(!$error){
-                set_logged($data['username']);
-                redirect(base_url('index.php?c=home&a=homelogin'));
+            if(empty($data)){
+                echo "<script>
+                        alert('Tên đăng nhập không có hoặc sai');
+                        history.back();
+                    </script>";
+                    
+            } else if ($data['password'] != $password){
+                echo "<script>
+                        alert('Mật khẩu sai');
+                        history.back();
+                    </script>";
+            } else {
+                $_SESSION['username']=$username;
+                $_SESSION['name']= $data['name'];
+                echo "<script>
+                        alert('Đăng nhập thành công');
+                    </script>";
+                header('Location: index.php?');
+                
             }
-            
-            
-        }
     }
 }

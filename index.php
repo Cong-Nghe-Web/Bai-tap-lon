@@ -12,6 +12,7 @@
     //         include './application/controller/' . $class . '.php';
     //     }
     // });
+    session_start(); 
     define("IN_SITE", true);
     include_once ('./libs/session.php');
     include_once ('./libs/role.php');

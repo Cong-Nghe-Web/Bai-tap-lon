@@ -13,5 +13,6 @@
     function session_delete($key){
         if (isset($_SESSION[$key])){
             unset($_SESSION[$key]);
+            session_destroy();
         }
     }
