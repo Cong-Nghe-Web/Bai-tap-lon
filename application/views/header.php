@@ -92,7 +92,7 @@
     font-family: Arial;
     border: 2px solid #ffaa56;
     border-radius: 5px;
-    cols: 50px;
+    columns: 50px;
     rows: 80px;
 
   }
@@ -113,7 +113,7 @@
 }
 
   table {
-    wight:100%;
+    width:100%;
   }
   /* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
   có chiều rộng dưới 700px */
