@@ -6,7 +6,6 @@
   body {
     font-family: Arial;
     padding: 10px;
-    background: #e9d8f4;
   }
   
   .topnav {
@@ -38,7 +37,7 @@
     
     .topnav a:hover {
       color: white;
-      background-color: #db7093;
+      background-color: #ceb6be;
       font-weight: bold;
     }
     
