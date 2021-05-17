@@ -14,13 +14,15 @@
   body {
     font-family: Arial;
     padding: 10px;
-    background: #ffd4aa;
+    /*background: #ffd4aa;*/
+    background:linen
   }
   
   .topnav {
-  padding: 10px;
+  /*padding: 10px;*/
   overflow: hidden;
-  background-color: #ffaa56;
+  /*background-color: #ffaa56;*/
+  background-color:midnightblue;
   position: sticky;
   top: 0; 
   position: fixed;
@@ -40,7 +42,7 @@
 
 /* Thay đổi màu liên kết khi di chuột qua */
 .topnav a:hover {
-  background-color: #ff7f00;
+  background-color:#ceb6be;
   color: white;
 }
   
@@ -55,13 +57,13 @@
   .rightcolumn {
     float: left;
     width: 25%;
-    /* background-color: #e9d8f4; */
+    background-color:linen;
     padding-left: 20px;
   }
   
   /* Hình ảnh tượng trưng */
   .fakeimg {
-    background-color: #ffaaaa;
+    /*background-color: #ffaaaa;*/
     width: 100%;
     padding: 20px;
   }
@@ -84,25 +86,26 @@
   .footer {
     padding: 10px;
     text-align: center;
-    background: white;
+    background: midnightblue;
     margin-top: 20px;
   }
   .search-box{
     padding: 14px 16px;
     font-family: Arial;
     border: 2px solid #ffaa56;
-    border-radius: 5px;
+    border-radius:5px;
+    margin-top:12px;
     columns: 50px;
     rows: 80px;
 
   }
   .search-button{
-    background-color: #ffaa56;
-    border: 2px solid #ffaa56;
-    border-radius: 5px;
+    background-color: white;
+    border: 2px solid;
+    border-radius:5px;
     padding: 14px 16px;
     font-family: Arial;
-    color: while;
+    color: black;
 
   }
 
@@ -169,3 +172,4 @@
         <div class="row">
         <div class="leftcolumn">
             <div class="card">
+
