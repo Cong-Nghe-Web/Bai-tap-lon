@@ -75,7 +75,7 @@ html{
   }
   
   main section form input[type="text"],input[type=password]{
-    background-color: #dedede;
+    background-color: #ffffff;
   }
   
   main section form .user-pass{
@@ -98,3 +98,4 @@ html{
   main section form input[type="submit"]:hover{
     background: green;
   }
+  
