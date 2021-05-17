@@ -21,7 +21,7 @@
   
   body{
     height: 100%;
-    background: #ffd4aa;
+    background: midnightblue;
   }
   
   main{
@@ -41,13 +41,14 @@
   
   main section{
     border: 1px solid green;
-    border-radius: 3px;
+    border-radius: 15px;
     padding: 20px;
     width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    background-color: white;
   }
   a{
       text-decoration: none;
@@ -159,8 +160,8 @@
             <input type="submit" value="Đăng ký" name='dangki'>
         </form>
         <div class="re_link">
-	        <a href="?c=home&a=dangnhap" class="re_link-login">Already have account? Login</a>
-	        <a href="index.php?" class="re_link-home">Back to home page</a>
+	        <a href="?c=home&a=dangnhap" class="re_link-login">Bạn đã có tài khoản? Đăng nhập ngay</a>
+	        <a href="index.php?" class="re_link-home">Quay lại trang chủ</a>
         </div>
     </section>
     
