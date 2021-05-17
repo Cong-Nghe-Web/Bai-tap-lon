@@ -1,7 +1,7 @@
 <?php include_once('header.php'); ?>
+                <div class="fakeimg" style="height: 400px">
+                <img src="https://i.imgur.com/j6qhsrh.jpg" width = "700" height = "350" alt='Ảnh học tiếng anh'></div>
                 <h2>Tại sao bạn nên học tại English?</h2>
-                <div class="fakeimg" style="height:200px;">
-                <img src="https://i.imgur.com/4RHmh1i.jpg" width = "500" height = "170" alt='Ảnh học tiếng anh'></div>
                 <p>Tiếng anh là ngôn ngữ phổ biến trên thế giới </p>
                 <p>English là một nền tảng học Tiếng Anh trực tuyến và bạn có thể học tập mọi lúc mọi nơi,
                     giúp bạn có thể tự học tập và luyện tập, nhằm nâng cao trình độ
