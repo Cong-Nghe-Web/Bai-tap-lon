@@ -36,7 +36,8 @@
   
   body{
     height: 100%;
-    background: #ffd4aa;
+    /*background: #ffd4aa;*/
+    background-color: midnightblue;
   }
   
   main{
@@ -56,13 +57,14 @@
   
   main section{
     border: 1px solid green;
-    border-radius: 3px;
+    border-radius: 15px;
     padding: 20px;
     width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    background-color: white;
   }
   a{
       text-decoration: none;
@@ -139,8 +141,8 @@
             </div>
             <input type="submit" value="Đăng nhập" name='dangnhap'>
         </form>
-        <a href='index.php?c=home&a=dangki'>Don't have account? Register</a>
-        <a href='index.php?'>Back to home page</a>
+        <a href='index.php?c=home&a=dangki'>Bạn chưa có tài khoản? Đăng kí ngay</a>
+        <a href='index.php?'>Quay lại trang chủ</a>
     </section>
 </main>
 </body>
