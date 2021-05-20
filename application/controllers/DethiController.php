@@ -12,6 +12,13 @@ class DethiController extends BaseController{
 
     public function bieudiendethi(){
         $id =$_REQUEST['id'];
-        return $this->CreateView($id);
+        if (isset($_SESSION['username']) && $_SESSION['username'] && isset($_SESSION['name']) && $_SESSION['name']){
+            return $this->CreateView($id);
+        }else {
+            echo "<script>
+            alert('Bạn cần đăng nhập để làm bài kiểm tra!');
+            history.back();
+            </script>";
+        }
     }
 }

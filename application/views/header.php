@@ -14,15 +14,13 @@
   body {
     font-family: Arial;
     padding: 10px;
-    /*background: #ffd4aa;*/
-    background:linen
+    background: #ffd4aa;
   }
   
   .topnav {
-  /*padding: 10px;*/
+
   overflow: hidden;
-  /*background-color: #ffaa56;*/
-  background-color:midnightblue;
+  background-color: #ffaa56;
   position: sticky;
   top: 0; 
   position: fixed;
@@ -42,7 +40,7 @@
 
 /* Thay đổi màu liên kết khi di chuột qua */
 .topnav a:hover {
-  background-color:#ceb6be;
+  background-color: #ff7f00;
   color: white;
 }
   
@@ -57,13 +55,13 @@
   .rightcolumn {
     float: left;
     width: 25%;
-    background-color:linen;
+    /* background-color: #e9d8f4; */
     padding-left: 20px;
   }
   
   /* Hình ảnh tượng trưng */
   .fakeimg {
-    /*background-color: #ffaaaa;*/
+    background-color: #ffaaaa;
     width: 100%;
     padding: 20px;
   }
@@ -86,26 +84,25 @@
   .footer {
     padding: 10px;
     text-align: center;
-    background: midnightblue;
+    background: white;
     margin-top: 20px;
   }
   .search-box{
     padding: 14px 16px;
     font-family: Arial;
     border: 2px solid #ffaa56;
-    border-radius:5px;
-    margin-top:12px;
-    columns: 50px;
+    border-radius: 5px;
+    cols: 50px;
     rows: 80px;
 
   }
   .search-button{
-    background-color: white;
-    border: 2px solid;
-    border-radius:5px;
+    background-color: #ffaa56;
+    border: 2px solid #ffaa56;
+    border-radius: 5px;
     padding: 14px 16px;
     font-family: Arial;
-    color: black;
+    color: while;
 
   }
 
@@ -116,7 +113,7 @@
 }
 
   table {
-    width:100%;
+    wight:100%;
   }
   /* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
   có chiều rộng dưới 700px */
@@ -157,7 +154,7 @@
             <a href="index.php?c=phanhoi&a=danhsach">Phản hồi</a>
             <?php 
               if (isset($_SESSION['username']) && $_SESSION['username'] && isset($_SESSION['name']) && $_SESSION['name']){
-                echo '<a href="index.php?c=out&a=logout" style="float:right">Logout</a><p style="float:right;color:while;font-size:15px">Xin chào '. $_SESSION['name'].'</p>';
+                echo '<a href="index.php?c=out&a=logout" style="float:right">Đăng xuất</a><p style="float:right;color:while;font-size:15px">Xin chào '. $_SESSION['name'].'</p>';
               }else {
                 echo '<a href="index.php?c=home&a=dangnhap" style="float:right">Đăng nhập</a>';
               }
@@ -172,4 +169,3 @@
         <div class="row">
         <div class="leftcolumn">
             <div class="card">
-
