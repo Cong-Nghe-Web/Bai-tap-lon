@@ -1,13 +1,13 @@
 <?php
 
 class ReviewController extends BaseController{
-    private $dethiModel;
+    private $reviewModel;
     public function __construct(){
         $this->CreateModel('ReviewModel');
-        $this->dethiModel= new DethiModel;
+        $this->reviewModel= new ReviewModel;
     }
     public function danhsach(){
-        $data = $this->dethiModel->getAll();
+        $data = $this->reviewModel->getAll();
         return $this->CreateViewData('review', $data);
     }
 
