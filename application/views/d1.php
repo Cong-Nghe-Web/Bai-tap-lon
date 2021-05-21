@@ -30,15 +30,15 @@
         var question_02 = document.myform3.question_02.value;
         var question_03 = document.myform3.question_03.value;
         var count = 0;
-        if(question_01 == "c")
+        if(question_01 === "c")
         {
             count++;
         }
-        if(question_02 == "a")
+        if(question_02 === "a")
         {
             count++;
         }
-        if(question_03 == "a")
+        if(question_03 === "a")
         {
             count++;
         }
