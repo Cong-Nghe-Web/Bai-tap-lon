@@ -119,14 +119,14 @@
 			fullName.trim();
 			name.trim();
 			pass.trim();
-			if( fullName =="" || name == ""|| pass== "" || pass2 == ""){
+			if( fullName ==="" || name === ""|| pass=== "" || pass2 === ""){
 				alert("Không được để trống thông tin");
 				return false;
 			}
 			if( pass.length < 6){
 				return false;
 			}
-			if( pass2 != pass){
+			if( pass2 !== pass){
 				alert("Mật khẩu xác thực không chính xác");
 				return false;
 			}
