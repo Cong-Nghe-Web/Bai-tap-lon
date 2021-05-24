@@ -3,6 +3,9 @@ class BaseController{
     public static function CreateViewData($viewName, $data){
         require_once './application/views/'.$viewName.'.php';
     }
+    public static function CreateViewData2($viewName, $data, $data2 = []){
+        require_once './application/views/'.$viewName.'.php';
+    }
     public static function CreateView($viewName){
         require_once './application/views/'.$viewName.'.php';
     }
