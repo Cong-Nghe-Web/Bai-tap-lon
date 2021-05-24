@@ -49,7 +49,7 @@ class BaseModel extends Database{
         return $this->_query($sql);
     }
 
-    public function all($table, $select= ['*'], $orderBys=[], $limit= 15){
+    public function all($table, $select= ['*'], $orderBys=[], $limit= 100){
         $columns= implode(',' , $select);
         $orderByString= implode(' ', $orderBys);
 

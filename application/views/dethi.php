@@ -15,7 +15,7 @@
         $c = 1;
 
         while ($c <= 15) {
-            $i = rand(1, 38); // sinh câu hỏi ngẫu nhiên
+            $i = rand(0, 37); // sinh câu hỏi ngẫu nhiên
             $val = $data[$i];
             echo $c.'.'. $val['Question'].'</br>';
             echo '<input type="radio" name="'.$val['ID'].'" value="A">'.$val['A'].'<br><br>';
