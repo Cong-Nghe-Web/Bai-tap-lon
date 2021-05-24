@@ -11,4 +11,14 @@ class ReviewController extends BaseController{
         return $this->CreateViewData('review', $data);
     }
 
+    public function check(){
+        $data = $this->reviewModel->getAll();
+        $count=0;
+        foreach($data as $val1){
+            if (isset($_POST[$val1['ID']]) && $val1['Answer']==$_POST[$val1['ID']])
+                $count= $count+1;
+        }
+        return $this->CreateViewData('diem', $count);
+    }
+
 }

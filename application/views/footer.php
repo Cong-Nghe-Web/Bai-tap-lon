@@ -7,6 +7,11 @@
                 <h2>Giới thiệu</h2>
                 <div class="fakeimg" style="height:250px;"><img src="https://i.imgur.com/7XXdIlm.png" alt='Ảnh nhóm 1'width=100% height=100%></div>
                 <p sytle="float:center">Nhóm CLV</p>
+                <ul>
+                    <li>Phạm Thị Minh Châu
+                    <li>Nguyễn Thuý Linh
+                    <li>Lê Thị Vân
+                </ul>
             </div>
             <div class="card">
             <h2>Hoạt động nổi bật trong tuần</h2>

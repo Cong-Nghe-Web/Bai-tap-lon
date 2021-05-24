@@ -1,19 +1,6 @@
 <?php include_once('header.php'); ?>
     <h3>Review tense</h3>    
-    <script type="text/javascript">
-    function check()
-    {
-        var count = 0;
-        foreach($data as $val){
-            if (document.myform.".$val['ID'].".value === $val['Answer'])
-                count++;
-        }
-//        if (document.myform.1.value === $data['Answer']{ count++;}
-        var b=document.querySelector(".points");
-	b.innerHTML = "Điểm:" + "  " + count;
-    }
-    </script>
-    <form name='myform'>
+    <form  action='<?php echo " ?c=review&a=check"?>' name='myform' method='POST' >
     <ul>
     <?php
         foreach ($data as $val) {
@@ -25,8 +12,9 @@
         }    
     ?>
     </ul>
-        <input  type="button" class="search-button" value="Kiểm tra đáp án" onclick="check()">
+        <input  type="submit" class="search-button" value="Kiểm tra đáp án">
     </form>
+    <div class="points"></div>
 <?php include_once('footer.php'); ?>
 
 
