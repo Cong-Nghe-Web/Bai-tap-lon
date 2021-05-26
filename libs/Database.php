@@ -1,6 +1,6 @@
 <?php
 class Database{
-    const HOST ='localhost:3300'; // sửa tên 
+    const HOST ='localhost:3306'; // sửa tên 
     const USERNAME ='root';
     const PASSWORD ='123456789';
     const DATABASE = 'btlweb';

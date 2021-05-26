@@ -36,8 +36,7 @@
   
   body{
     height: 100%;
-    /*background: #ffd4aa;*/
-    background-color: midnightblue;
+    background: #ffd4aa;
   }
   
   main{

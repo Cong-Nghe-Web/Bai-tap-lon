@@ -3,136 +3,115 @@
     <head>
         <meta charset="utf-8">
         <title>Học tiếng anh cùng CLV</title>
-        <link ref="stylesheet" href='../../public/home/css/main.css' type="text/css"> 
-        <style>
+        <style>            
+          * {
+            box-sizing: border-box;
+          }
+          
+          body {
+            font-family: Arial;
+            padding: 10px;
+            background: #ffd4aa;
+          }
+          
+          .topnav {
 
-            
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial;
-    padding: 10px;
-    background: #ffd4aa;
-  }
-  
-  .topnav {
+          overflow: hidden;
+          background-color: #ffaa56;
+          position: sticky;
+          top: 0; 
+          position: fixed;
+          width: 100%;
+        }
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          
+        }
+        .topnav a:hover {
+          background-color: #ff7f00;
+          color: white;
+        }
+          
+        .leftcolumn { 
+          float: left;
+          width: 75%;
+        }
+          
+          .rightcolumn {
+            float: left;
+            width: 25%;
+            padding-left: 20px;
+          }
+          
+          .fakeimg {
+            background-color: #ffaaaa;
+            width: 100%;
+            padding: 20px;
+          }
+          .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+          }
+          
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          
+          .footer {
+            padding: 10px;
+            text-align: center;
+            background: white;
+            margin-top: 20px;
+          }
+          .search-box{
+            padding: 14px 16px;
+            font-family: Arial;
+            border: 2px solid #ffaa56;
+            border-radius: 5px;
+            cols: 50px;
+            rows: 80px;
 
-  overflow: hidden;
-  background-color: #ffaa56;
-  position: sticky;
-  top: 0; 
-  position: fixed;
-  width: 100%;
-}
+          }
+          .search-button{
+            background-color: #ffaa56;
+            border: 2px solid #ffaa56;
+            border-radius: 5px;
+            padding: 14px 16px;
+            font-family: Arial;
+            color: while;
 
-/* Định dạng link điều hướng */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  
-}
+          }
 
-/* Thay đổi màu liên kết khi di chuột qua */
-.topnav a:hover {
-  background-color: #ff7f00;
-  color: white;
-}
-  
-  /* Tạo hai cột không bằng nhau, float cạnh nhau 
-   Cột trái */
-  .leftcolumn { 
-    float: left;
-    width: 75%;
-  }
-  
-  /* Cột phải */
-  .rightcolumn {
-    float: left;
-    width: 25%;
-    /* background-color: #e9d8f4; */
-    padding-left: 20px;
-  }
-  
-  /* Hình ảnh tượng trưng */
-  .fakeimg {
-    background-color: #ffaaaa;
-    width: 100%;
-    padding: 20px;
-  }
-  
-  /* Thêm định dạng thẻ cho bài viết */
-  .card {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  /* Clear float khác sau các cột */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Footer */
-  .footer {
-    padding: 10px;
-    text-align: center;
-    background: white;
-    margin-top: 20px;
-  }
-  .search-box{
-    padding: 14px 16px;
-    font-family: Arial;
-    border: 2px solid #ffaa56;
-    border-radius: 5px;
-    cols: 50px;
-    rows: 80px;
+          .search-button:hover{
+            background-color:#ff7f00;
+            color:while;
 
-  }
-  .search-button{
-    background-color: #ffaa56;
-    border: 2px solid #ffaa56;
-    border-radius: 5px;
-    padding: 14px 16px;
-    font-family: Arial;
-    color: while;
+        }
 
-  }
-
-  .search-button:hover{
-   	background-color:#ff7f00;
-   	color:while;
-
-}
-
-  table {
-    wight:100%;
-  }
-  /* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
-  có chiều rộng dưới 700px */
-  @media screen and (max-width: 700px) {
-    .leftcolumn, .rightcolumn { 
-      width: 100%;
-      padding: 0;
-    }
-  }
-  
-  /* Bố cục linh hoạt: Thanh menu điều hướng xếp chồng lên nhau thay vì cạnh nhau
-  khi màn hình có chiều rộng dưới 300px  */
-  @media screen and (max-width: 300px) {
-    .topnav li a {
-      float: none;
-      width: 100%;
-    }
-  }
-</style>
+          table {
+            wight:100%;
+          }
+          @media screen and (max-width: 700px) {
+            .leftcolumn, .rightcolumn { 
+              width: 100%;
+              padding: 0;
+            }
+          }
+          @media screen and (max-width: 300px) {
+            .topnav li a {
+              float: none;
+              width: 100%;
+            }
+          }
+        </style>
   <script type="text/javascript">
 		function Validate(){
 			var name = document.myform.sreach.value;

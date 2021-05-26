@@ -21,7 +21,7 @@
   
   body{
     height: 100%;
-    background: midnightblue;
+    background: #ffd4aa;
   }
   
   main{
