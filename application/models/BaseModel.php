@@ -48,6 +48,17 @@ class BaseModel extends Database{
         $sql= "insert into ${table}(${columns}) values (${newValues})";
         return $this->_query($sql);
     }
+    public function create1($table, $data =[]){
+
+        $columns= implode(',', array_keys($data));
+        $newValues= array_map(function ($value) {
+            return "'$value'";
+        }, array_values($data));
+        $newValues=  implode(',', $newValues);
+        $sql= "insert into ${table}(${columns}) values (${newValues})";
+       
+        return $this->_query($sql);
+    }
 
     public function all($table, $select= ['*'], $orderBys=[], $limit= 100){
         $columns= implode(',' , $select);

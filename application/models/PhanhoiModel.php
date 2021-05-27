@@ -7,6 +7,6 @@ class PhanhoiModel extends BaseModel{
         return $this->all(self::TABLE, $select);
     }
     public function addPhanhoi($data){
-        $this->create(self::TABLE, $data);
+        $this->create1(self::TABLE, $data);
     }
 }
